@@ -16,8 +16,38 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
+        int number;
+        int n;
+        
+        Console.Write("Write a possitive positive integer number: ");
+        number = Convert.ToInt32(Console.ReadLine());
+
+        if (number > 0)
+        {
+            //if the number is 2 or 3 the numbers is prime.
+            if (number == 3 || number == 2)
+            {
+                Console.WriteLine("The number is prime: True");
+                return;
+            }
+
+            //else calculate is it number prime. 
+            {
+                for (n = 2; n < number; n++)
+                {
+
+                    bool result = number % n == 0;
+                    Console.WriteLine("The number is prime: {0}", result);
+                    return;
+
+                }
+            }
+        }
+        {
+            Console.WriteLine("The number is prime: False");
+        }
     }
 }
 
